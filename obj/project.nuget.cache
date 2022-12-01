@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "5zGBqc4ltSweiyJ/ceFEb3PgCEl+KXs71s//c3HaVFQueV+MNEAH2UTgJq4gbi0cGrzIwOAJzTu5ZCXPEu1Q3w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Facundo\\Documents\\C#\\Run\\Unit04.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Facundo\\.nuget\\packages\\raylib-cs\\3.7.0.1\\raylib-cs.3.7.0.1.nupkg.sha512",
+    "C:\\Users\\Facundo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
