@@ -1,7 +1,7 @@
 using System;
 
 
-namespace Unit04.Game.Casting
+namespace Unit05.Game.Casting
 {
     /// <summary>
     /// <para>A thing that participates in the game.</para>
@@ -14,7 +14,7 @@ namespace Unit04.Game.Casting
     {
         private string _text = "";
         private int _fontSize = 15;
-        private Color _color = new Color(255, 255, 255); // white
+        private Color _color = Constants.WHITE;
         private Point _position = new Point(0, 0);
         private Point _velocity = new Point(0, 0);
 
@@ -75,12 +75,10 @@ namespace Unit04.Game.Casting
         /// from one side of the screen to the other when it reaches the maximum x and y 
         /// values.
         /// </summary>
-        /// <param name="maxX">The maximum x value.</param>
-        /// <param name="maxY">The maximum y value.</param>
-        public void MoveNext(int maxX, int maxY)
+        public virtual void MoveNext()
         {
-            int x = ((_position.GetX() + _velocity.GetX()) + maxX) % maxX;
-            int y = ((_position.GetY() + _velocity.GetY()) + maxY) % maxY;
+            int x = ((_position.GetX() + _velocity.GetX()) + Constants.MAX_X) % Constants.MAX_X;
+            int y = ((_position.GetY() + _velocity.GetY()) + Constants.MAX_Y) % Constants.MAX_Y;
             _position = new Point(x, y);
         }
 

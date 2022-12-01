@@ -1,8 +1,5 @@
-
-# Greed
-Greed is a game where the player controls a greedy robot whose only goal is to collect as many gems as fast as possible. 
-The play has 60 second to score 25 points. 
-Each rock removes a point from the players score.
+# Cycles
+Cycles is a game where two players ride cycles and try to cut each other off. Just like driving in real life.
 
 ---
 ## Getting Started
@@ -26,12 +23,14 @@ root                    (project root folder)
 +-- Game                (source code folder)
 +-- Program.cs          (program entry point)    
 +-- README.md           (general info)
-+-- Unit04.csproj       (dotnet project file)
++-- Unit05.csproj       (dotnet project file)
 ```
 
 ## Required Technologies
 * dotnet 6.0
 * raylib-cs 3.7.0.1
 
-## Author
-* Justin Mikolajcik (mik19003@byui.edu)
+## Authors
+Justin Mikolajcik
+Eder Morales
+Justin Morley

@@ -1,4 +1,4 @@
-namespace Unit04.Game.Casting
+namespace Unit05.Game.Casting
 {
     /// <summary>
     /// <para>A distance from a relative origin (0, 0).</para>
@@ -63,6 +63,17 @@ namespace Unit04.Game.Casting
             return _y;
         }
 
+        /// <summary>
+        /// Reverses the point by inverting both x and y values.
+        /// </summary>
+        /// <returns>A new point that is reversed.</returns>
+        public Point Reverse()
+        {
+            int x = this._x * -1;
+            int y = this._y * -1;
+            return new Point(x, y);
+        }
+        
         /// <summary>
         /// Scales the point by multiplying the x and y values by the provided factor.
         /// </summary>

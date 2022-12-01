@@ -125,9 +125,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Facundo\\Documents\\C#\\Run\\Unit04.csproj",
-      "projectName": "Unit04",
-      "projectPath": "C:\\Users\\Facundo\\Documents\\C#\\Run\\Unit04.csproj",
+      "projectUniqueName": "C:\\Users\\Facundo\\Documents\\C#\\Run\\07-cycles.csproj",
+      "projectName": "07-cycles",
+      "projectPath": "C:\\Users\\Facundo\\Documents\\C#\\Run\\07-cycles.csproj",
       "packagesPath": "C:\\Users\\Facundo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Facundo\\Documents\\C#\\Run\\obj\\",
       "projectStyle": "PackageReference",
