@@ -63,8 +63,8 @@ namespace Unit05.Game.Casting
                 Actor segment = new Actor();
                 segment.SetPosition(position);
                 segment.SetVelocity(velocity);
-                segment.SetText("#");
-                segment.SetColor(Constants.RED);
+                segment.SetText("_");
+                segment.SetColor(Constants.GRAY);
                 _segments.Add(segment);
             }
         }
@@ -109,8 +109,8 @@ namespace Unit05.Game.Casting
             {
                 Point position = new Point(x - i * Constants.CELL_SIZE, y);
                 Point velocity = new Point(1 * Constants.CELL_SIZE, 0);
-                string text = i == 0 ? "8" : "#";
-                Color color = i == 0 ? Constants.YELLOW : Constants.RED;
+                string text = i == 0 ? ">|<" : "_";
+                Color color = i == 0 ? Constants.GRAY : Constants.GRAY;
 
                 Actor segment = new Actor();
                 segment.SetPosition(position);

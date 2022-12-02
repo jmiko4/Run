@@ -40,7 +40,7 @@ namespace Unit05.Game.Services
         public void ClearBuffer()
         {
             Raylib.BeginDrawing();
-            Raylib.ClearBackground(Raylib_cs.Color.BLACK);
+            Raylib.ClearBackground(Raylib_cs.Color.WHITE);
             if (_debug)
             {
                 DrawGrid();
