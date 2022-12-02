@@ -8,14 +8,14 @@ namespace Unit05.Game.Casting
     /// <para>A long limbless reptile.</para>
     /// <para>The responsibility of Snake is to move itself.</para>
     /// </summary>
-    public class Snake2 : Actor
+    public class Obstacle : Actor
     {
-        private List<Actor> _segments = new List<Actor>();
+        private List<Actor> _cacti = new List<Actor>();
 
         /// <summary>
         /// Constructs a new instance of a Snake.
         /// </summary>
-        public Snake2()
+        public Obstacle()
         {
             PrepareBody();
         }
@@ -26,7 +26,7 @@ namespace Unit05.Game.Casting
         /// <returns>The body segments in a List.</returns>
         public List<Actor> GetBody()
         {
-            return new List<Actor>(_segments.Skip(1).ToArray());
+            return new List<Actor>(_cacti.Skip(1).ToArray());
         }
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace Unit05.Game.Casting
         /// <returns>The head segment as an instance of Actor.</returns>
         public Actor GetHead()
         {
-            return _segments[0];
+            return _cacti[0];
         }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace Unit05.Game.Casting
         /// <returns>A list of snake segments as instances of Actors.</returns>
         public List<Actor> GetSegments()
         {
-            return _segments;
+            return _cacti;
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Unit05.Game.Casting
         {
             for (int i = 0; i < numberOfSegments; i++)
             {
-                Actor tail = _segments.Last<Actor>();
+                Actor tail = _cacti.Last<Actor>();
                 Point velocity = tail.GetVelocity();
                 Point offset = velocity.Reverse();
                 Point position = tail.GetPosition().Add(offset);
@@ -65,22 +65,22 @@ namespace Unit05.Game.Casting
                 segment.SetVelocity(velocity);
                 segment.SetText("");
                 segment.SetColor(Constants.GRAY);
-                _segments.Add(segment);
+                _cacti.Add(segment);
             }
         }
 
         /// <inheritdoc/>
         public override void MoveNext()
         {
-            foreach (Actor segment in _segments)
+            foreach (Actor segment in _cacti)
             {
                 segment.MoveNext();
             }
 
-            for (int i = _segments.Count - 1; i > 0; i--)
+            for (int i = _cacti.Count - 1; i > 0; i--)
             {
-                Actor trailing = _segments[i];
-                Actor previous = _segments[i - 1];
+                Actor trailing = _cacti[i];
+                Actor previous = _cacti[i - 1];
                 Point velocity = previous.GetVelocity();
                 trailing.SetVelocity(velocity);
             }
@@ -92,7 +92,7 @@ namespace Unit05.Game.Casting
         /// <param name="velocity">The given direction.</param>
         public void TurnHead(Point direction)
         {
-            _segments[0].SetVelocity(direction);
+            _cacti[0].SetVelocity(direction);
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace Unit05.Game.Casting
         private void PrepareBody()
         {
             int x = Constants.MAX_X / 8;
-            int y = 305;
+            int y = 315;
 
             for (int i = 0; i < Constants.SNAKE_LENGTH; i++)
             {
@@ -115,7 +115,7 @@ namespace Unit05.Game.Casting
                 segment.SetVelocity(velocity);
                 segment.SetText(text);
                 segment.SetColor(color);
-                _segments.Add(segment);
+                _cacti.Add(segment);
             }
         }
     }
