@@ -28,7 +28,7 @@ namespace Unit05.Game.Scripting
             List<Actor> segments = snake.GetSegments();
             Snake2 snake2 = (Snake2)cast.GetFirstActor("snake2");
             List<Actor> segments2 = snake2.GetSegments();
-            Obstacle obstacle = (Obstacle)cast.GetFirstActor("obstacle");
+            Obstacle obstacle = (Obstacle)cast.GetFirstActor("obstacles");
             List<Actor> obstacles = obstacle.GetSegments();
             // Actor score = cast.GetFirstActor("score");
             Actor food = cast.GetFirstActor("food");
