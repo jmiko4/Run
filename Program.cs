@@ -22,7 +22,7 @@ namespace Unit05
             cast.AddActor("food", new Food());
             cast.AddActor("snake", new Snake());
             cast.AddActor("snake2", new Snake2());
-            cast.AddActor("obstacle", new Obstacle());
+            cast.AddActor("obstacles", new Obstacle());
             cast.AddActor("score", new Score());
             cast.AddActor("runner", new Runner());
 

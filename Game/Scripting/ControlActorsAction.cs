@@ -14,8 +14,12 @@ namespace Unit05.Game.Scripting
     {
         private KeyboardService _keyboardService;
         private Point _direction = new Point(-Constants.CELL_SIZE, 0);
+<<<<<<< HEAD
         private Point _direction2 = new Point(-Constants.CELL_SIZE, 0);
         
+=======
+        private Point _direction2 = new Point(Constants.CELL_SIZE, 0);
+>>>>>>> d92c0206cb26aa72126e9ad12c2bb9529c8a958d
 
         /// <summary>
         /// Constructs a new instance of ControlActorsAction using the given KeyboardService.
