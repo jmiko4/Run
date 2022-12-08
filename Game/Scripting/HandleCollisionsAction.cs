@@ -71,21 +71,29 @@ namespace Unit05.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
+            Point position = new Point(90, 285);
             List<Actor> obstacles = cast.GetActors("obstacles");
-            Snake snake = (Snake)cast.GetFirstActor("snake");
+            Obstacle obstacle = (Obstacle)cast.GetFirstActor("obstacles");
+            Actor head = obstacle.GetHead();
+            Runner runner = (Runner)cast.GetFirstActor("runner");
             // Snake2 snake2 = (Snake2)cast.GetFirstActor("snake2");
-            Actor head = snake.GetHead();
             // Actor head2 = snake2.GetHead();
             // List<Actor> body = snake.GetBody();
             // List<Actor> body2 = snake2.GetBody();
 
+            if (runner.GetPosition().Equals(head.GetPosition()))
+                {
+                    Console.WriteLine("HELLO");
+                    _isGameOver = true;
+                }
+
             foreach (Actor segment in obstacles)
             {
-                if (segment.GetPosition().Equals(head.GetPosition()))
+                
+                if (runner.GetPosition().Equals(segment.GetPosition()))
                 {
+                    Console.WriteLine("HELLO");
                     _isGameOver = true;
-                    winner = 1;
-
                 }
             }
 
@@ -96,6 +104,7 @@ namespace Unit05.Game.Scripting
         {
             if (_isGameOver == true)
             {
+                Console.WriteLine("Game is over");
                 Script script = new Script();
                 Snake snake = (Snake)cast.GetFirstActor("snake");
                 Snake2 snake2 = (Snake2)cast.GetFirstActor("snake2");

@@ -110,12 +110,12 @@ namespace Unit05.Game.Casting
         /// </summary>
         public void PrepareBody()
         {
-            int x = Constants.MAX_X / 8;
-            int y = 290;
+            int x = 900;
+            int y = 285;
 
             for (int i = 0; i < 1; i++)
             {
-                Point position = new Point(895, y);
+                Point position = new Point(x, y);
                 Point velocity = new Point(-1 * Constants.CELL_SIZE, 0);
                 string text = i == 0 ? ">|<" : "_";
                 Color color = i == 0 ? Constants.GRAY : Constants.GRAY;
