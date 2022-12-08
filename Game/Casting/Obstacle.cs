@@ -111,7 +111,7 @@ namespace Unit05.Game.Casting
         public void PrepareBody()
         {
             int x = Constants.MAX_X / 8;
-            int y = 297;
+            int y = 290;
 
             for (int i = 0; i < 1; i++)
             {
