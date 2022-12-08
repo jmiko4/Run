@@ -120,19 +120,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Facundo\\.nuget\\packages\\": {}
+    "C:\\Users\\justm\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Facundo\\Documents\\C#\\Run\\07-cycles.csproj",
+      "projectUniqueName": "C:\\Users\\justm\\OneDrive\\Documents\\School Work\\Python\\Program w Classes\\Unit6_project\\Run\\07-cycles.csproj",
       "projectName": "07-cycles",
-      "projectPath": "C:\\Users\\Facundo\\Documents\\C#\\Run\\07-cycles.csproj",
-      "packagesPath": "C:\\Users\\Facundo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Facundo\\Documents\\C#\\Run\\obj\\",
+      "projectPath": "C:\\Users\\justm\\OneDrive\\Documents\\School Work\\Python\\Program w Classes\\Unit6_project\\Run\\07-cycles.csproj",
+      "packagesPath": "C:\\Users\\justm\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\justm\\OneDrive\\Documents\\School Work\\Python\\Program w Classes\\Unit6_project\\Run\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Facundo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\justm\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"

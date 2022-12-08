@@ -30,6 +30,7 @@ namespace Unit05.Game.Scripting
             List<Actor> segments2 = snake2.GetSegments();
             Obstacle obstacle = (Obstacle)cast.GetFirstActor("obstacle");
             List<Actor> obstacles = obstacle.GetSegments();
+            Runner runner = (Runner)cast.GetFirstActor("runner");
             // Actor score = cast.GetFirstActor("score");
             Actor food = cast.GetFirstActor("food");
             List<Actor> messages = cast.GetActors("messages");
@@ -38,6 +39,7 @@ namespace Unit05.Game.Scripting
             _videoService.DrawActors(segments);
             _videoService.DrawActors(segments2);
             _videoService.DrawActors(obstacles);
+            _videoService.DrawActor(runner);
             // _videoService.DrawActor(score);
             _videoService.DrawActor(food);
             _videoService.DrawActors(messages);
