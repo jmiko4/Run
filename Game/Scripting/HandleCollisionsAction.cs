@@ -72,8 +72,8 @@ namespace Unit05.Game.Scripting
         private void HandleSegmentCollisions(Cast cast)
         {
             Point position = new Point(90, 285);
-            List<Actor> obstacles = cast.GetActors("obstacles");
             Obstacle obstacle = (Obstacle)cast.GetFirstActor("obstacles");
+            List<Actor> obstacles = obstacle.GetBody();
             Actor head = obstacle.GetHead();
             Runner runner = (Runner)cast.GetFirstActor("runner");
             // Snake2 snake2 = (Snake2)cast.GetFirstActor("snake2");

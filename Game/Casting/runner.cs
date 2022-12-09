@@ -67,14 +67,14 @@ namespace Unit05.Game.Casting
                 }
                 
             }
-            // else if(position.GetY() <= 285)
-            // {
-            //     SetVelocity(gravity);
-            // }
-            // else if (position.GetY() >= 285)
-            // {
-            //     SetVelocity(neutral);
-            // }
+            else if(position.GetY() < 285)
+            {
+                SetVelocity(gravity);
+            }
+            else if (position.GetY() >= 285)
+            {
+                SetVelocity(neutral);
+            }
         }
             
     }
