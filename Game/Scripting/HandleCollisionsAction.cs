@@ -10,8 +10,8 @@ namespace Unit05.Game.Scripting
     /// <summary>
     /// <para>An update action that handles interactions between the actors.</para>
     /// <para>
-    /// The responsibility of HandleCollisionsAction is to handle the situation when the snake 
-    /// collides with the food, or the snake collides with its segments, or the game is over.
+    /// The responsibility of HandleCollisionsAction is to handle the situation when the Floor 
+    /// collides with the food, or the Floor collides with its segments, or the game is over.
     /// </para>
     /// </summary>
     public class HandleCollisionsAction : Action

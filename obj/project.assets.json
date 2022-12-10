@@ -120,19 +120,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\justm\\.nuget\\packages\\": {}
+    "C:\\Users\\Facundo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\justm\\OneDrive\\Coding\\C#\\Run\\07-cycles.csproj",
+      "projectUniqueName": "C:\\Users\\Facundo\\Documents\\C#\\Run\\07-cycles.csproj",
       "projectName": "07-cycles",
-      "projectPath": "C:\\Users\\justm\\OneDrive\\Coding\\C#\\Run\\07-cycles.csproj",
-      "packagesPath": "C:\\Users\\justm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\justm\\OneDrive\\Coding\\C#\\Run\\obj\\",
+      "projectPath": "C:\\Users\\Facundo\\Documents\\C#\\Run\\07-cycles.csproj",
+      "packagesPath": "C:\\Users\\Facundo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Facundo\\Documents\\C#\\Run\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\justm\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Facundo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -177,7 +177,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -6,22 +6,22 @@ namespace Unit05.Game.Casting
 {
     /// <summary>
     /// <para>A long limbless reptile.</para>
-    /// <para>The responsibility of Snake is to move itself.</para>
+    /// <para>The responsibility of Floor is to move itself.</para>
     /// </summary>
-    public class Snake : Actor
+    public class Floor : Actor
     {
         private List<Actor> _segments = new List<Actor>();
 
         /// <summary>
-        /// Constructs a new instance of a Snake.
+        /// Constructs a new instance of a Floor.
         /// </summary>
-        public Snake()
+        public Floor()
         {
             PrepareBody();
         }
 
         /// <summary>
-        /// Gets the snake's body segments.
+        /// Gets the Floor's body segments.
         /// </summary>
         /// <returns>The body segments in a List.</returns>
         public List<Actor> GetBody()
@@ -30,7 +30,7 @@ namespace Unit05.Game.Casting
         }
 
         /// <summary>
-        /// Gets the snake's head segment.
+        /// Gets the Floor's head segment.
         /// </summary>
         /// <returns>The head segment as an instance of Actor.</returns>
         public Actor GetHead()
@@ -39,16 +39,16 @@ namespace Unit05.Game.Casting
         }
 
         /// <summary>
-        /// Gets the snake's segments (including the head).
+        /// Gets the Floor's segments (including the head).
         /// </summary>
-        /// <returns>A list of snake segments as instances of Actors.</returns>
+        /// <returns>A list of Floor segments as instances of Actors.</returns>
         public List<Actor> GetSegments()
         {
             return _segments;
         }
 
         /// <summary>
-        /// Grows the snake's tail by the given number of segments.
+        /// Grows the Floor's tail by the given number of segments.
         /// </summary>
         /// <param name="numberOfSegments">The number of segments to grow.</param>
         public void GrowTail(int numberOfSegments)
@@ -89,7 +89,7 @@ namespace Unit05.Game.Casting
         }
 
         /// <summary>
-        /// Turns the head of the snake in the given direction.
+        /// Turns the head of the Floor in the given direction.
         /// </summary>
         /// <param name="velocity">The given direction.</param>
         public void TurnHead(Point direction)
@@ -98,14 +98,14 @@ namespace Unit05.Game.Casting
         }
 
         /// <summary>
-        /// Prepares the snake body for moving.
+        /// Prepares the Floor body for moving.
         /// </summary>
         private void PrepareBody()
         {
             int x = Constants.MAX_X / 2;
             int y = (Constants.MAX_Y / 2) - 10;
 
-            for (int i = 0; i < Constants.SNAKE_LENGTH; i++)
+            for (int i = 0; i < Constants.Floor_LENGTH; i++)
             {
                 Point position = new Point(x - i * Constants.CELL_SIZE, y);
                 Point velocity = new Point(1 * Constants.CELL_SIZE, 0);

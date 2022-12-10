@@ -25,10 +25,10 @@ namespace Unit05.Game.Scripting
         /// <inheritdoc/>
         public void Execute(Cast cast, Script script)
         {
-            Snake snake = (Snake)cast.GetFirstActor("snake");
-            List<Actor> segments = snake.GetSegments();
-            Snake2 snake2 = (Snake2)cast.GetFirstActor("snake2");
-            List<Actor> segments2 = snake2.GetSegments();
+            Floor Floor = (Floor)cast.GetFirstActor("Floor");
+            List<Actor> segments = Floor.GetSegments();
+            Floor2 Floor2 = (Floor2)cast.GetFirstActor("Floor2");
+            List<Actor> segments2 = Floor2.GetSegments();
             Obstacle obstacle = (Obstacle)cast.GetFirstActor("obstacles");
             List<Actor> obstacles = obstacle.GetSegments();
             Runner runner = (Runner)cast.GetFirstActor("runner");

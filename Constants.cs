@@ -21,7 +21,7 @@ namespace Unit05.Game
         public static int FRAME_RATE = 15;
         public static int FONT_SIZE = 15;
         public static string CAPTION = "Run";
-        public static int SNAKE_LENGTH = 100;
+        public static int Floor_LENGTH = 200;
 
         public static Color RED = new Color(255, 0, 0);
         public static Color WHITE = new Color(255, 255, 255);

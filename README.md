@@ -1,5 +1,5 @@
-# Cycles
-Cycles is a game where two players ride cycles and try to cut each other off. Just like driving in real life.
+# RUN
+Run is a game where you are running and jumping over obstacles trying to get the highest score possible.
 
 ---
 ## Getting Started
@@ -23,7 +23,7 @@ root                    (project root folder)
 +-- Game                (source code folder)
 +-- Program.cs          (program entry point)    
 +-- README.md           (general info)
-+-- Unit05.csproj       (dotnet project file)
++-- 07-cycles.csproj       (dotnet project file)
 ```
 
 ## Required Technologies
