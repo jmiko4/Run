@@ -12,15 +12,17 @@ namespace Unit05.Game.Casting
     public class Score : Actor
     {
         private int _points = 0;
-        Point Scoreboard = new Point(100,100);
+        Point Scoreboard = new Point(810,15);
+        private bool scoring = true;
 
         /// <summary>
         /// Constructs a new instance of an Food.
         /// </summary>
         public Score()
         {
-            SetText("++++++");
             AddPoints(0);
+            SetColor(Constants.RED);
+            SetPosition(Scoreboard);
         }
 
         /// <summary>
@@ -29,8 +31,21 @@ namespace Unit05.Game.Casting
         /// <param name="points">The points to add.</param>
         public void AddPoints(int points)
         {
-            this._points ++;
+            if (scoring == true)
+            {
+                this._points ++;
             SetText($"Score: {this._points}");
+            }
+            else
+            {
+                SetText($"Score: {this._points}");
+            }
+            
+        }
+
+        public void StopScoring()
+        {
+            this.scoring = false;
         }
     }
 }

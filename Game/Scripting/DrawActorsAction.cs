@@ -31,17 +31,16 @@ namespace Unit05.Game.Scripting
             Obstacle obstacle = (Obstacle)cast.GetFirstActor("obstacles");
             List<Actor> obstacles = obstacle.GetSegments();
             Runner runner = (Runner)cast.GetFirstActor("runner");
-            // Actor score = cast.GetFirstActor("score");
             Actor food = cast.GetFirstActor("food");
             List<Actor> messages = cast.GetActors("messages");
-            Actor score = cast.GetFirstActor("score");
+            Actor score = (Score)cast.GetFirstActor("score");
             
             _videoService.ClearBuffer();
             _videoService.DrawActors(segments);
             _videoService.DrawActors(segments2);
             _videoService.DrawActors(obstacles);
             _videoService.DrawActor(runner);
-            // _videoService.DrawActor(score);
+            _videoService.DrawActor(score);
             _videoService.DrawActor(food);
             _videoService.DrawActors(messages);
             _videoService.FlushBuffer();

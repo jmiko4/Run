@@ -18,6 +18,7 @@ namespace Unit05.Game.Casting
         private Point gravity = new Point(0, Constants.CELL_SIZE * 2);
         private Point neutral = new Point(0,0);
         private Point jump = new Point(0,-Constants.CELL_SIZE * 2);
+        private bool playing = true;
         /// <summary>
         /// Constructs a new instance of a Runner.
         /// </summary>
@@ -41,8 +42,11 @@ namespace Unit05.Game.Casting
         public void Gravity(Point position)
         {
             
-            
-            if (IsJumping == true | hangtime == true)
+            if(playing == false)
+            {
+                SetVelocity(neutral);
+            }
+            else if (IsJumping == true | hangtime == true)
             {   if (IsJumping == true)
                 {
                     SetVelocity(jump);
@@ -75,6 +79,11 @@ namespace Unit05.Game.Casting
             {
                 SetVelocity(neutral);
             }
+        }
+
+        public void StopRunning()
+        {
+            playing = false;
         }
             
     }

@@ -87,6 +87,8 @@ namespace Unit05.Game.Scripting
 
             Snake2 snake2 = (Snake2)cast.GetFirstActor("snake2");
             snake2.TurnHead(_direction2);
+            Score score = (Score)cast.GetFirstActor("score");
+            score.AddPoints(0);
             
         }
     }

@@ -11,6 +11,7 @@ namespace Unit05.Game.Casting
     public class Obstacle : Actor
     {
         private List<Actor> _cacti = new List<Actor>();
+        private bool playing = true;
 
         /// <summary>
         /// Constructs a new instance of a Snake.
@@ -47,53 +48,27 @@ namespace Unit05.Game.Casting
             return _cacti;
         }
 
-        /// <summary>
-        /// Grows the snake's tail by the given number of segments.
-        /// </summary>
-        /// <param name="numberOfSegments">The number of segments to grow.</param>
-        // public void GrowTail(int numberOfSegments)
-        // {
-        //     for (int i = 0; i < numberOfSegments; i++)
-        //     {
-        //         // Actor tail = _cacti.Last<Actor>();
-        //         // Point velocity = tail.GetVelocity();
-        //         // Point offset = velocity.Reverse();
-        //         // Point position = tail.GetPosition().Add(offset);
-        //         Point position = new Point(200, 200);
-        //         Point velocity = new Point(1, 0);
-
-        //         Actor segment = new Actor();
-        //         segment.SetPosition(position);
-        //         segment.SetVelocity(velocity);
-        //         segment.SetText("");
-        //         segment.SetColor(Constants.GRAY);
-        //         _cacti.Add(segment);
-        //     }
-        // }
-
         // / <inheritdoc/>
         public override void MoveNext()
         {
             foreach (Actor segment in _cacti)
             {
-                Point position = segment.GetPosition();
-                // segment.MoveNext();
-                int x = position.GetX() - 15;
-                int y = position.GetY();
-                position = new Point(x, y);
-                segment.SetPosition(position);
+                if (playing == true)
+                {
+                    Point position = segment.GetPosition();
+                    int x = position.GetX() - 15;
+                    int y = position.GetY();
+                    position = new Point(x, y);
+                    segment.SetPosition(position);
+                }
+                else
+                {
+                    Point stop = new Point(0, 0);
+                    segment.SetVelocity(stop);
+                }
+                
                 
             }
-
-            
-
-            // for (int i = _cacti.Count - 1; i > 0; i--)
-            // {
-            //     Actor trailing = _cacti[i];
-            //     Actor previous = _cacti[i - 1];
-            //     Point velocity = previous.GetVelocity();
-            //     trailing.SetVelocity(velocity);
-            // }
         }
 
         /// <summary>
@@ -115,18 +90,26 @@ namespace Unit05.Game.Casting
 
             for (int i = 0; i < 1; i++)
             {
-                Point position = new Point(x, y);
-                Point velocity = new Point(-1 * Constants.CELL_SIZE, 0);
-                string text = i == 0 ? ">|<" : "_";
-                Color color = i == 0 ? Constants.GRAY : Constants.GRAY;
+                if (playing == true)
+                {
+                    Point position = new Point(x, y);
+                    Point velocity = new Point(-1 * Constants.CELL_SIZE, 0);
+                    string text = i == 0 ? ">|<" : "_";
+                    Color color = i == 0 ? Constants.GRAY : Constants.GRAY;
 
-                Actor segment = new Actor();
-                segment.SetPosition(position);
-                segment.SetVelocity(velocity);
-                segment.SetText(text);
-                segment.SetColor(color);
-                _cacti.Add(segment);
+                    Actor segment = new Actor();
+                    segment.SetPosition(position);
+                    segment.SetVelocity(velocity);
+                    segment.SetText(text);
+                    segment.SetColor(color);
+                    _cacti.Add(segment);
+                }
             }
+        }
+
+        public void Stop()
+        {
+            playing = false;
         }
     }
 }

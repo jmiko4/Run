@@ -71,10 +71,12 @@ namespace Unit05.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
-            List<Actor> obstacles = cast.GetActors("obstacles");
+            Point position = new Point(90, 285);
             Obstacle obstacle = (Obstacle)cast.GetFirstActor("obstacles");
+            List<Actor> obstacles = obstacle.GetBody();
             Actor head = obstacle.GetHead();
             Runner runner = (Runner)cast.GetFirstActor("runner");
+            Score score = (Score)cast.GetFirstActor("score");
             // Snake2 snake2 = (Snake2)cast.GetFirstActor("snake2");
             // Actor head2 = snake2.GetHead();
             // List<Actor> body = snake.GetBody();
@@ -84,6 +86,10 @@ namespace Unit05.Game.Scripting
                 {
                     Console.WriteLine("HELLO");
                     _isGameOver = true;
+                    score.StopScoring();
+                    runner.StopRunning();
+                    obstacle.Stop();
+
                 }
 
             foreach (Actor segment in obstacles)
@@ -93,6 +99,9 @@ namespace Unit05.Game.Scripting
                 {
                     Console.WriteLine("HELLO");
                     _isGameOver = true;
+                    score.StopScoring();
+                    runner.StopRunning();
+                    obstacle.Stop();
                 }
             }
 
