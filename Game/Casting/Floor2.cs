@@ -73,7 +73,7 @@ namespace Unit05.Game.Casting
         }
 
         /// <summary>
-        /// Prepares the Floor body for moving.
+        /// Prepares the Floor for moving.
         /// </summary>
         private void PrepareBody()
         {

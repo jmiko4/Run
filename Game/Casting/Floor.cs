@@ -5,7 +5,7 @@ using System.Linq;
 namespace Unit05.Game.Casting
 {
     /// <summary>
-    /// <para>A long limbless reptile.</para>
+    /// <para>The floor</para>
     /// <para>The responsibility of Floor is to move itself.</para>
     /// </summary>
     public class Floor : Actor
