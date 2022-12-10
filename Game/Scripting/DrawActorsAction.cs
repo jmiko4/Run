@@ -12,6 +12,7 @@ namespace Unit05.Game.Scripting
     public class DrawActorsAction : Action
     {
         private VideoService _videoService;
+        public bool over = false;
 
         /// <summary>
         /// Constructs a new instance of ControlActorsAction using the given KeyboardService.
@@ -31,9 +32,12 @@ namespace Unit05.Game.Scripting
             Obstacle obstacle = (Obstacle)cast.GetFirstActor("obstacles");
             List<Actor> obstacles = obstacle.GetSegments();
             Runner runner = (Runner)cast.GetFirstActor("runner");
-            Actor food = cast.GetFirstActor("food");
-            List<Actor> messages = cast.GetActors("messages");
             Actor score = (Score)cast.GetFirstActor("score");
+            Actor game_over = (Actor)cast.GetFirstActor("game over");
+            game_over.SetText("GAME OVER");
+            Point over = new Point((Constants.MAX_X / 2) - 30, 105);
+            game_over.SetPosition(over);
+            
             
             _videoService.ClearBuffer();
             _videoService.DrawActors(segments);
@@ -41,9 +45,13 @@ namespace Unit05.Game.Scripting
             _videoService.DrawActors(obstacles);
             _videoService.DrawActor(runner);
             _videoService.DrawActor(score);
-            _videoService.DrawActor(food);
-            _videoService.DrawActors(messages);
+            _videoService.DrawActor(game_over);
             _videoService.FlushBuffer();
+        }
+
+        public void End_Screen()
+        {
+            over = true;
         }
     }
 }

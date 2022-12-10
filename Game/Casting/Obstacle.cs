@@ -5,8 +5,8 @@ using System.Linq;
 namespace Unit05.Game.Casting
 {
     /// <summary>
-    /// <para>A long limbless reptile.</para>
-    /// <para>The responsibility of Snake is to move itself.</para>
+    /// <para>A cactus which hurts if you touch it </para>
+    /// <para>The responsibility of the obstacles is to get in the runners way </para>
     /// </summary>
     public class Obstacle : Actor
     {
@@ -14,7 +14,7 @@ namespace Unit05.Game.Casting
         private bool playing = true;
 
         /// <summary>
-        /// Constructs a new instance of a Snake.
+        /// Constructs a new instance of Obstacles
         /// </summary>
         public Obstacle()
         {
@@ -22,27 +22,27 @@ namespace Unit05.Game.Casting
         }
 
         /// <summary>
-        /// Gets the snake's body segments.
+        /// Gets the all the obstacles
         /// </summary>
-        /// <returns>The body segments in a List.</returns>
+        /// <returns>The obstacles in a list</returns>
         public List<Actor> GetBody()
         {
             return new List<Actor>(_cacti.Skip(1).ToArray());
         }
 
         /// <summary>
-        /// Gets the snake's head segment.
+        /// Gets the first cacti in the list
         /// </summary>
-        /// <returns>The head segment as an instance of Actor.</returns>
+        /// <returns>The first cacti in the list</returns>
         public Actor GetHead()
         {
             return _cacti[0];
         }
 
         /// <summary>
-        /// Gets the snake's segments (including the head).
+        /// Gets the rest of the cacti in the list.
         /// </summary>
-        /// <returns>A list of snake segments as instances of Actors.</returns>
+        /// <returns>A list of cacti that will be used as obstacles</returns>
         public List<Actor> GetSegments()
         {
             return _cacti;
@@ -72,16 +72,15 @@ namespace Unit05.Game.Casting
         }
 
         /// <summary>
-        /// Turns the head of the snake in the given direction.
+        /// Sets the velocity of the first cacti
         /// </summary>
-        /// <param name="velocity">The given direction.</param>
         public void TurnHead(Point direction)
         {
             _cacti[0].SetVelocity(direction);
         }
 
         /// <summary>
-        /// Prepares the snake body for moving.
+        /// Creates new instances of cacti
         /// </summary>
         public void PrepareBody()
         {
@@ -107,6 +106,9 @@ namespace Unit05.Game.Casting
             }
         }
 
+        /// <summary>
+        /// Stops the movement of the obstacles
+        /// </summary>
         public void Stop()
         {
             playing = false;

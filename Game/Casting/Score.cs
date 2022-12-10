@@ -4,9 +4,8 @@ using System;
 namespace Unit05.Game.Casting
 {
     /// <summary>
-    /// <para>A tasty item that snakes like to eat.</para>
     /// <para>
-    /// The responsibility of Food is to select a random position and points that it's worth.
+    /// The responsibility of the score is to keep track of the user's score and display it
     /// </para>
     /// </summary>
     public class Score : Actor
@@ -16,7 +15,7 @@ namespace Unit05.Game.Casting
         private bool scoring = true;
 
         /// <summary>
-        /// Constructs a new instance of an Food.
+        /// Constructs a new scoreboard
         /// </summary>
         public Score()
         {
@@ -43,6 +42,9 @@ namespace Unit05.Game.Casting
             
         }
 
+        /// <summary>
+        /// Stops the score when player loses
+        /// </summary>
         public void StopScoring()
         {
             this.scoring = false;

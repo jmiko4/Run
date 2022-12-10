@@ -19,13 +19,13 @@ namespace Unit05
         {
             // create the cast
             Cast cast = new Cast();
-            cast.AddActor("food", new Food());
-            cast.AddActor("snake", new Snake());
             cast.AddActor("snake2", new Snake2());
             cast.AddActor("obstacles", new Obstacle());
             cast.AddActor("score", new Score());
             cast.AddActor("runner", new Runner());
             cast.AddActor("score", new Score());
+            cast.AddActor("snake", new Snake());
+            cast.AddActor("game over", new Actor());
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();

@@ -103,13 +103,13 @@ namespace Unit05.Game.Casting
         private void PrepareBody()
         {
             int x = Constants.MAX_X / 2;
-            int y = Constants.MAX_Y / 2;
+            int y = (Constants.MAX_Y / 2) - 10;
 
             for (int i = 0; i < Constants.SNAKE_LENGTH; i++)
             {
                 Point position = new Point(x - i * Constants.CELL_SIZE, y);
                 Point velocity = new Point(1 * Constants.CELL_SIZE, 0);
-                string text = i == 0 ? "" : "_";
+                string text = i == 0 ? "_" : "__";
                 Color color = i == 0 ? Constants.GRAY : Constants.GRAY;
 
                 Actor segment = new Actor();
