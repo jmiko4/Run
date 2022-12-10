@@ -10,7 +10,7 @@ namespace Unit05.Game.Casting
     /// </summary>
     public class Runner : Actor
     {
-        Point position = new Point(90, 285);
+        Point position = new Point(90, 255);
         private bool IsJumping;
         private bool hangtime = false;
         private int time = 0;
@@ -67,14 +67,14 @@ namespace Unit05.Game.Casting
                 }
                 
             }
-            // else if(position.GetY() <= 285)
-            // {
-            //     SetVelocity(gravity);
-            // }
-            // else if (position.GetY() >= 285)
-            // {
-            //     SetVelocity(neutral);
-            // }
+            else if(position.GetY() < 285)
+            {
+                SetVelocity(gravity);
+            }
+            else if (position.GetY() == 285)
+            {
+                SetVelocity(neutral);
+            }
         }
             
     }

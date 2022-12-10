@@ -71,7 +71,6 @@ namespace Unit05.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
-            Point position = new Point(90, 285);
             List<Actor> obstacles = cast.GetActors("obstacles");
             Obstacle obstacle = (Obstacle)cast.GetFirstActor("obstacles");
             Actor head = obstacle.GetHead();

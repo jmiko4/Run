@@ -12,12 +12,14 @@ namespace Unit05.Game.Casting
     public class Score : Actor
     {
         private int _points = 0;
+        Point Scoreboard = new Point(100,100);
 
         /// <summary>
         /// Constructs a new instance of an Food.
         /// </summary>
         public Score()
         {
+            SetText("++++++");
             AddPoints(0);
         }
 
@@ -27,7 +29,7 @@ namespace Unit05.Game.Casting
         /// <param name="points">The points to add.</param>
         public void AddPoints(int points)
         {
-            this._points += points;
+            this._points ++;
             SetText($"Score: {this._points}");
         }
     }
