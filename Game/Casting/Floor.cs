@@ -48,7 +48,7 @@ namespace Unit05.Game.Casting
         }
 
         /// <summary>
-        /// Grows the Floor's tail by the given number of segments.
+        /// Grows the Floor's segments by the given number of segments.
         /// </summary>
         /// <param name="numberOfSegments">The number of segments to grow.</param>
         public void GrowTail(int numberOfSegments)

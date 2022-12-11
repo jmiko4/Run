@@ -7,7 +7,7 @@ namespace Unit05.Game.Scripting
     /// <summary>
     /// <para>An input action that controls the Floor.</para>
     /// <para>
-    /// The responsibility of ControlActorsAction is to get the direction and move the Floor's head.
+    /// The responsibility of ControlActorsAction is to get the direction and move the Floor's first caracter.
     /// </para>
     /// </summary>
     public class ControlActorsAction : Action
@@ -42,7 +42,6 @@ namespace Unit05.Game.Scripting
             }
 
             Floor2 Floor2 = (Floor2)cast.GetFirstActor("Floor2");
-            Floor2.TurnHead(_direction2);
             Score score = (Score)cast.GetFirstActor("score");
             score.AddPoints(0);
             

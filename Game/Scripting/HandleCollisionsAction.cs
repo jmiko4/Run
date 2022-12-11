@@ -17,7 +17,6 @@ namespace Unit05.Game.Scripting
     public class HandleCollisionsAction : Action
     {
         private bool _isGameOver = false;
-        private int winner;
 
         /// <summary>
         /// Constructs a new instance of HandleCollisionsAction.
@@ -31,7 +30,6 @@ namespace Unit05.Game.Scripting
         {
             if (_isGameOver == false)
             {
-                // HandleFoodCollisions(cast);
                 HandleSegmentCollisions(cast);
             }
         }
@@ -48,7 +46,6 @@ namespace Unit05.Game.Scripting
 
             if (runner.GetPosition().Equals(head.GetPosition()))
                 {
-                    Console.WriteLine("HELLO");
                     _isGameOver = true;
                     score.StopScoring();
                     runner.StopRunning();
@@ -63,7 +60,6 @@ namespace Unit05.Game.Scripting
                 
                 if (runner.GetPosition().Equals(segment.GetPosition()))
                 {
-                    Console.WriteLine("HELLO");
                     _isGameOver = true;
                     score.StopScoring();
                     runner.StopRunning();

@@ -5,7 +5,7 @@ using System;
 namespace Unit05.Game.Scripting{
 
     public class Clock : Action{
-        //Is a clock that keeps track of the number of ticks and increases the length of the Floors
+        //Is a clock that keeps track of the number of ticks and increases the length of the Floor
         private int _tickCount;
         private int _rticks;
         Random rand = new Random();
@@ -16,7 +16,7 @@ namespace Unit05.Game.Scripting{
         }
 
         public void Tick(Cast cast){
-            //every 5 ticks increases the length of the Floors
+            //every 5 ticks increases the length of the Floor
             _rticks = rand.Next(20, 50);
             Obstacle obstacle = (Obstacle)cast.GetFirstActor("obstacles");
             _tickCount++;

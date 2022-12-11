@@ -21,20 +21,14 @@ namespace Unit05.Game.Services
         /// </summary>
         public KeyboardService()
         {
-            _keys["w"] = KeyboardKey.KEY_W;
-            _keys["a"] = KeyboardKey.KEY_A;
-            _keys["s"] = KeyboardKey.KEY_S;
-            _keys["d"] = KeyboardKey.KEY_D;
-            _keys["i"] = KeyboardKey.KEY_I;
-            _keys["j"] = KeyboardKey.KEY_J;
             _keys["space"] = KeyboardKey.KEY_SPACE;
-            _keys["l"] = KeyboardKey.KEY_L;
+   
         }
 
         /// <summary>
         /// Checks if the given key is currently down.
         /// </summary>
-        /// <param name="key">The given key (w, a, s, d, i, j, k, or l)</param>
+        /// <param name="key">The given key (space)</param>
         /// <returns>True if the given key is down; false if otherwise.</returns>
         public bool IsKeyDown(string key)
         {
@@ -45,7 +39,7 @@ namespace Unit05.Game.Services
         /// <summary>
         /// Checks if the given key is currently up.
         /// </summary>
-        /// <param name="key">The given key (w, a, s, d, i, j, k, or l)</param>
+        /// <param name="key">The given key (space)</param>
         /// <returns>True if the given key is up; false if otherwise.</returns>
         public bool IsKeyUp(string key)
         {
